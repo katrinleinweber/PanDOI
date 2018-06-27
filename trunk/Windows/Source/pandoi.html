@@ -71,7 +71,7 @@ function openWindow()
   if ( value.substr( 0, 7 ) == "doi:10." )
   {
       if ( value.substr( 0, 20 ) == "doi:10.1594/pangaea." )
-        url = "http://doi.pangaea.de/" + value.substr( 4 );
+        url = "https://doi.pangaea.de/" + value.substr( 4 );
       else
         url = "http://dx.doi.org/" + value.substr( 4 );
   }
@@ -89,16 +89,16 @@ function openWindow()
     url = value;
 
   if ( ( value == "l" ) || ( value == "latest" ) )
-    url = "http://www.pangaea.de/tools/latest-datasets.rss";
+    url = "https://www.pangaea.de/tools/latest-datasets.rss";
 
   if ( value.substr( 0, 2 ) == "l+" ) 
-    url = "http://www.pangaea.de/tools/latest-datasets.rss?q=" + value.substr( 2 );
+    url = "https://www.pangaea.de/tools/latest-datasets.rss?q=" + value.substr( 2 );
 	
   if ( value.substr( 0, 7 ) == "latest+" )
-    url = "http://www.pangaea.de/tools/latest-datasets.rss?q=" + value.substr( 7 );
+    url = "https://www.pangaea.de/tools/latest-datasets.rss?q=" + value.substr( 7 );
 
   if ( url.substr( 0, 7 ) != "http://" )
-    url = "http://www.pangaea.de/search?q=" + value;
+    url = "https://www.pangaea.de/search?q=" + value;
 
   shell.Run( url ); 
   
@@ -107,7 +107,7 @@ function openWindow()
 
 function headerClick() 
 { 
-  shell.Run( "http://wiki.pangaea.de/wiki/PanDOI" ); 
+  shell.Run( "https://wiki.pangaea.de/wiki/PanDOI" ); 
   
   return false; 
 }

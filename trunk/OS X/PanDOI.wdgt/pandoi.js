@@ -7,7 +7,7 @@ function srch(s)
   var url   = "";
   
   if ( value.length < 1 )
-    value = "http://www.pangaea.de/";
+    value = "https://www.pangaea.de/";
 	
   if ( parseInt( value ) == value )
     value = "doi:10.1594/PANGAEA." + value;
@@ -32,7 +32,7 @@ function srch(s)
   if ( value.substr( 0, 7 ) == "doi:10." )
   {
       if ( value.substr( 0, 20 ) == "doi:10.1594/pangaea." )
-        url = "http://doi.pangaea.de/" + value.substr( 4 );
+        url = "https://doi.pangaea.de/" + value.substr( 4 );
       else
         url = "http://dx.doi.org/" + value.substr( 4 );
   }
@@ -50,16 +50,16 @@ function srch(s)
     url = value;
 
   if ( ( value == "l" ) || ( value == "latest" ) )
-    url = "http://www.pangaea.de/tools/latest-datasets.rss";
+    url = "https://www.pangaea.de/tools/latest-datasets.rss";
 
   if ( value.substr( 0, 2 ) == "l+" ) 
-    url = "http://www.pangaea.de/tools/latest-datasets.rss?q=" + value.substr( 2 );
+    url = "https://www.pangaea.de/tools/latest-datasets.rss?q=" + value.substr( 2 );
 	
   if ( value.substr( 0, 7 ) == "latest+" )
-    url = "http://www.pangaea.de/tools/latest-datasets.rss?q=" + value.substr( 7 );
+    url = "https://www.pangaea.de/tools/latest-datasets.rss?q=" + value.substr( 7 );
 
   if ( url.substr( 0, 7 ) != "http://" )
-    url = "http://www.pangaea.de/search?q=" + value;
+    url = "https://www.pangaea.de/search?q=" + value;
 
   if (widget)
 	widget.openURL(url);
@@ -67,14 +67,14 @@ function srch(s)
 
 function logoClick() 
 { 
-  url = "http://wiki.pangaea.de/wiki/PanDOI";
+  url = "https://wiki.pangaea.de/wiki/PanDOI";
   if (widget)
 	widget.openURL(url);
 }
 
 function headerClick() 
 { 
-  url = "http://wiki.pangaea.de/wiki/PanDOI";
+  url = "https://wiki.pangaea.de/wiki/PanDOI";
   if (widget)
 	widget.openURL(url);
 }
